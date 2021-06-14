@@ -1,16 +1,15 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "react-native";
+import Routes from "./src/routes";
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <>
+    <StatusBar barStyle='dark-content'/>
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
+</>
   );
 }
